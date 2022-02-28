@@ -42,6 +42,7 @@ void InsertionSort(int a[], int n) {
         a[pos + 1] = temp;
     }
 }
+//THUAT TOAN SAP XEP: INTERCHANGE SORT
 void InterchangeSort(int a[], int n) {
     for (int i = 0; i < n - 1; i++) {
         for (int j = i + 1; i < n; j++) {
@@ -50,6 +51,7 @@ void InterchangeSort(int a[], int n) {
         }
     }
 }
+//THUAT TOAN SAP XEP: BUBBLE SORT
 void BubbleSort(int a[], int n) {
     for (int i = 0; i < n - 1; i++) {
         for (int j = n - 1; j > i; j--) {
@@ -58,6 +60,7 @@ void BubbleSort(int a[], int n) {
         }
     }
 }
+//THUAT TOAN SAP XEP: QUICK SORT
 void QuickSort(int a[], int left, int right) {
     int pivot = a[(left+right)/2];
     int l = left;
@@ -75,7 +78,7 @@ void QuickSort(int a[], int left, int right) {
             r--;
         }
     } while (l <= r);
-    
+
     if (r > left) {
         QuickSort(a, left, r);
     }
@@ -83,6 +86,7 @@ void QuickSort(int a[], int left, int right) {
         QuickSort(a, l, right);
     }
 }
+//THUAT TOAN SAP XEP: MERGE SORT
 // THUẬT TOÁN SẮP XẾP 2 DÃY CÓ THỨ TỰ THÀNH 1 DÃY CÓ THỨ TỰ
 int* merge(int* a, int n1, int* b, int n2) {
     int* c = (int*)malloc((n1+n2)*sizeof(int));
@@ -115,7 +119,7 @@ int* mergeSort(int a[], int n) {
     }
     for (int i = 0; i < n-mid; i++) {
         m2[i] = a[i + mid];
-    }   // TÁCH ĐC 2 DẪY PHỤ M1 VS M2 LẦN ĐẦU 
+    }   // TÁCH ĐC 2 DẪY PHỤ M1 VS M2 LẦN ĐẦU
     // DÙNG ĐỆ QUY TIẾP TỤC TÁCH 2 DÃY CHO TỚI KHI DÃY PHỤ CON CHỈ CÓ 1 PHẦN TỬ
     m1 = mergeSort(m1, mid);
     m2 = mergeSort(m2, n - mid);
